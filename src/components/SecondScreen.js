@@ -28,6 +28,7 @@ const SecondScreen = ({ navigation }) => {
         <View style={styles.pickerLabelContainer}>
           <Text style={styles.pickerLabel}>Día</Text>
           <View style={styles.pickerContainer}>
+            <Text style={styles.selectedValue}> {day}</Text>
             <Picker
               selectedValue={day}
               style={styles.picker}
@@ -37,7 +38,7 @@ const SecondScreen = ({ navigation }) => {
                 <Picker.Item key={day} label={(day).toString().padStart(2, '0')} value={day} />
               ))}
             </Picker>
-            <Text style={styles.selectedValue}> {day}</Text>
+            
           </View>
         </View>
 
@@ -45,6 +46,7 @@ const SecondScreen = ({ navigation }) => {
         <View style={styles.pickerLabelContainer}>
           <Text style={styles.pickerLabel}>Hora</Text>
           <View style={styles.pickerContainer}>
+          <Text style={styles.selectedValue}>: {hour}</Text>
             <Picker
               selectedValue={hour}
               style={styles.picker}
@@ -54,7 +56,6 @@ const SecondScreen = ({ navigation }) => {
                 <Picker.Item key={hour} label={hour.toString().padStart(2, '0')} value={hour} />
               ))}
             </Picker>
-            <Text style={styles.selectedValue}>: {hour}</Text>
           </View>
         </View>
 
@@ -62,6 +63,7 @@ const SecondScreen = ({ navigation }) => {
         <View style={styles.pickerLabelContainer}>
           <Text style={styles.pickerLabel}>Minuto</Text>
           <View style={styles.pickerContainer}>
+          <Text style={styles.selectedValue}>: {minute}</Text>
             <Picker
               selectedValue={minute}
               style={styles.picker}
@@ -71,7 +73,7 @@ const SecondScreen = ({ navigation }) => {
                 <Picker.Item key={minute} label={minute.toString().padStart(2, '0')} value={minute} />
               ))}
             </Picker>
-            <Text style={styles.selectedValue}>: {minute}</Text>
+            
           </View>
         </View>
 
@@ -79,6 +81,7 @@ const SecondScreen = ({ navigation }) => {
         <View style={styles.pickerLabelContainer}>
           <Text style={styles.pickerLabel}>Segundo</Text>
           <View style={styles.pickerContainer}>
+          <Text style={styles.selectedValue}>: {second}</Text>
             <Picker
               selectedValue={second}
               style={styles.picker}
@@ -88,7 +91,6 @@ const SecondScreen = ({ navigation }) => {
                 <Picker.Item key={second} label={second.toString().padStart(2, '0')} value={second} />
               ))}
             </Picker>
-            <Text style={styles.selectedValue}>: {second}</Text>
           </View>
         </View>
       </View>
@@ -99,6 +101,7 @@ const SecondScreen = ({ navigation }) => {
         <View style={styles.pickerLabelContainer}>
           <Text style={styles.pickerLabel}>Día</Text>
           <View style={styles.pickerContainer}>
+          <Text style={styles.selectedValue}> {day2}</Text>
             <Picker
               selectedValue={day2}
               style={styles.picker}
@@ -108,7 +111,7 @@ const SecondScreen = ({ navigation }) => {
                 <Picker.Item key={day} label={(day).toString().padStart(2, '0')} value={day} />
               ))}
             </Picker>
-            <Text style={styles.selectedValue}> {day2}</Text>
+            
           </View>
         </View>
 
@@ -116,6 +119,7 @@ const SecondScreen = ({ navigation }) => {
         <View style={styles.pickerLabelContainer}>
           <Text style={styles.pickerLabel}>Hora</Text>
           <View style={styles.pickerContainer}>
+          <Text style={styles.selectedValue}>: {hour2}</Text>
             <Picker
               selectedValue={hour2}
               style={styles.picker}
@@ -125,7 +129,7 @@ const SecondScreen = ({ navigation }) => {
                 <Picker.Item key={hour} label={hour.toString().padStart(2, '0')} value={hour} />
               ))}
             </Picker>
-            <Text style={styles.selectedValue}>: {hour2}</Text>
+            
           </View>
         </View>
 
@@ -133,6 +137,7 @@ const SecondScreen = ({ navigation }) => {
         <View style={styles.pickerLabelContainer}>
           <Text style={styles.pickerLabel}>Minuto</Text>
           <View style={styles.pickerContainer}>
+          <Text style={styles.selectedValue}>: {minute2}</Text>
             <Picker
               selectedValue={minute2}
               style={styles.picker}
@@ -142,7 +147,7 @@ const SecondScreen = ({ navigation }) => {
                 <Picker.Item key={minute} label={minute.toString().padStart(2, '0')} value={minute} />
               ))}
             </Picker>
-            <Text style={styles.selectedValue}>: {minute2}</Text>
+            
           </View>
         </View>
 
@@ -150,6 +155,7 @@ const SecondScreen = ({ navigation }) => {
         <View style={styles.pickerLabelContainer}>
           <Text style={styles.pickerLabel}>Segundo</Text>
           <View style={styles.pickerContainer}>
+          <Text style={styles.selectedValue}>: {second2}</Text>
             <Picker
               selectedValue={second2}
               style={styles.picker}
@@ -159,7 +165,7 @@ const SecondScreen = ({ navigation }) => {
                 <Picker.Item key={second} label={second.toString().padStart(2, '0')} value={second} />
               ))}
             </Picker>
-            <Text style={styles.selectedValue}>: {second2}</Text>
+            
           </View>
         </View>
       </View>
@@ -194,7 +200,7 @@ const styles = StyleSheet.create({
   pickerRow: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    marginBottom: 30,
+    marginBottom: 10,
     alignItems: 'center',
   },
   pickerLabelContainer: {
@@ -207,16 +213,17 @@ const styles = StyleSheet.create({
   },
   picker: {
     height: 50,
-    width: 25,
+    width: 35,
     borderWidth: 1,
-    textAlign: 'center',
-    alignItems: 'center',
+    textAlign: 'flex-end',
+    alignItems: 'flex-end',
     borderColor: '#FFD700', // Amarillo
     borderRadius: 10,
   },
   pickerContainer: {
     flexDirection: 'row',
     alignItems: 'center',
+    marginLeft: 30
   },
   selectedValue: {
     fontSize: 16,
@@ -238,5 +245,3 @@ const styles = StyleSheet.create({
 });
 
 export default SecondScreen;
-
-
