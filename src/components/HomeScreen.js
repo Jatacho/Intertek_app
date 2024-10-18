@@ -1,35 +1,5 @@
-/*import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
-
-const HomeScreen = ({ navigation }) => {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Esta es la pantalla de inicio</Text>
-      <Button
-        title="Ir a la segunda pantalla"
-        onPress={() => navigation.navigate('Second')}
-      />
-    </View>
-  );
-};
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  text: {
-    fontSize: 18,
-    marginBottom: 20,
-  },
-});
-
-export default HomeScreen;
-*/
 import React from 'react';
 import { View, TouchableOpacity, Text, Button, StyleSheet, SafeAreaView, Image } from 'react-native';
-
 
 const HomeScreen = ({ navigation }) => {
   return (
@@ -51,21 +21,15 @@ const HomeScreen = ({ navigation }) => {
           <Text style={styles.menuText}>MAQUINA 1</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.menuItem}>
+        <TouchableOpacity style={styles.menuItem} onPress={() => navigation.navigate('Third')}>
           <Image style={styles.icon} source={require('../../assets/Maquina2.png')} />
           <Text style={styles.menuText}>MAQUINA 2</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.menuItem}>
+        <TouchableOpacity style={styles.menuItem} onPress={() => navigation.navigate('Fourth')}>
           <Image style={styles.icon} source={require('../../assets/Maquina3.png')} />
           <Text style={styles.menuText}>MAQUINA 3</Text>
         </TouchableOpacity>
-
-        <TouchableOpacity style={styles.menuItem}>
-          <Image style={styles.icon} source={require('../../assets/Maquina4.png')} />
-          <Text style={styles.menuText}>MAQUINA 4</Text>
-        </TouchableOpacity>
-
       </View>
     </View>
   );
