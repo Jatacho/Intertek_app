@@ -14,7 +14,7 @@ const SecondScreen = ({ navigation }) => {
   const [minute2, setMinute2] = useState('00');
   const [second2, setSecond2] = useState('00');
  
-const esp8266IP = "http://192.168.95.205";  // Cambia esto con la IP de tu ESP8266
+const esp8266IP = "http://10.224.49.5";  // Cambia esto con la IP de tu ESP8266
  
   // Función para enviar datos a la ESP8266
   const enviarDatos = async () => {
