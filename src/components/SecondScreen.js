@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Button, StyleSheet, Image, Alert } from 'react-native';
+import { View, Text, Button, StyleSheet, Image, Alert , TextInput} from 'react-native';
 import { Picker } from '@react-native-picker/picker';
  
 const SecondScreen = ({ navigation }) => {
@@ -13,6 +13,8 @@ const SecondScreen = ({ navigation }) => {
   const [hour2, setHour2] = useState('00');
   const [minute2, setMinute2] = useState('00');
   const [second2, setSecond2] = useState('00');
+
+  const [ciclos, setCiclos] = useState('1');
  
 const esp8266IP = "http://10.224.49.5";  // Cambia esto con la IP de tu ESP8266
  
@@ -22,6 +24,7 @@ const esp8266IP = "http://10.224.49.5";  // Cambia esto con la IP de tu ESP8266
       const datos = {
         encendido: `${day}:${hour}:${minute}:${second}`,
         apagado: `${day2}:${hour2}:${minute2}:${second2}`,
+        ciclos: ciclos,
       };
  
       const response = await fetch(`${esp8266IP}/enviar`, {
@@ -210,6 +213,14 @@ const esp8266IP = "http://10.224.49.5";  // Cambia esto con la IP de tu ESP8266
               </View>
             </View>
       
+            <Text style={styles.title}>CANTIDAD DE CICLOS</Text>
+            <TextInput
+              style={styles.input}
+              value={ciclos}
+              onChangeText={setCiclos}
+              keyboardType="numeric"
+              placeholder="Ingrese ciclos"
+            />
  
       <View style={styles.buttonContainer}>
         <Button title="Enviar Datos" color="#FFD700" onPress={enviarDatos} />
@@ -280,6 +291,16 @@ const styles = StyleSheet.create({
     marginTop: 10,
     borderRadius: 5,
     marginBottom: 10,
+  },
+  input: {
+    height: 40,
+    borderColor: '#FFD700', // Amarillo
+    borderWidth: 1,
+    borderRadius: 5,
+    paddingHorizontal: 10,
+    marginBottom: 20,
+    width: '80%',
+    alignSelf: 'center',
   },
 });
  
