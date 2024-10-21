@@ -30,6 +30,11 @@ const HomeScreen = ({ navigation }) => {
           <Image style={styles.icon} source={require('../../assets/Maquina3.png')} />
           <Text style={styles.menuText}>MAQUINA 3</Text>
         </TouchableOpacity>
+
+        <TouchableOpacity style={styles.menuItem}>
+          <Image style={styles.icon} source={require('../../assets/Maquina4.png')} />
+          <Text style={styles.menuText}>MAQUINA 4</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );

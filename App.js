@@ -1,12 +1,10 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import HomeScreen from './src/components/HomeScreen.js';
-import SecondScreen from './src/components/SecondScreen.js';
-import ThirdScreen from './src/components/ThirdScreen.js';
-import FourthScreen from './src/components/FourthScreen.js';
-import { foregroungImage } from 'react-native';
-
+import HomeScreen from './src/components/HomeScreen';
+import SecondScreen from './src/components/SecondScreen';
+import ThirdScreen from './src/components/ThirdScreen';
+import FourthScreen from './src/components/FourthScreen';
 
 const Stack = createStackNavigator();
 
