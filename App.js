@@ -5,6 +5,7 @@ import HomeScreen from './src/components/HomeScreen';
 import SecondScreen from './src/components/SecondScreen';
 import ThirdScreen from './src/components/ThirdScreen';
 import FourthScreen from './src/components/FourthScreen';
+import FifthScreen from './src/components/FifthScreen';
 
 const Stack = createStackNavigator();
 
@@ -16,6 +17,7 @@ const App = () => {
         <Stack.Screen name="Second" component={SecondScreen} />
         <Stack.Screen name="Third" component={ThirdScreen} />
         <Stack.Screen name="Fourth" component={FourthScreen} />
+        <Stack.Screen name="Fifth" component={FifthScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

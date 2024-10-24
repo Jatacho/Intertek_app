@@ -31,7 +31,7 @@ const HomeScreen = ({ navigation }) => {
           <Text style={styles.menuText}>MAQUINA 3</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.menuItem}>
+        <TouchableOpacity style={styles.menuItem} onPress={() => navigation.navigate('Fifth')}>
           <Image style={styles.icon} source={require('../../assets/Maquina4.png')} />
           <Text style={styles.menuText}>MAQUINA 4</Text>
         </TouchableOpacity>
